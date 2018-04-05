@@ -42,7 +42,6 @@ function sendArticleCountEmails(){
     var rowData = edata[i];
     var emailAddress = rowData[1];
     var recipient = rowData[0];
-    var message ='Dear '+ recipient +',\n\n';
     var subject ='Google Analytics Logs from '+from_date+' to '+to_date;
 
     // HTML本文を htmlbody に格納していきます。
