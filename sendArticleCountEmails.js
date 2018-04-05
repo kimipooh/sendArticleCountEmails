@@ -33,7 +33,7 @@ function sendArticleCountEmails(){
   //var pdf = dd.getAs('application/pdf').setName("Google-Analytics-Reports-"+from_date+"_"+to_date+".pdf"); 
   var ssid = dd.getId();
   var sheetid = sheet.getSheetId();
-  var filename = "CSEAS-Google-Analytics-Reports-"+from_date+"_"+to_date;
+  var filename = "Google-Analytics-Reports-"+from_date+"_"+to_date;
   var pdf = createPDF(ssid, sheetid, filename);
   
   // E-mailデータの抽出
