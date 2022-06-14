@@ -45,15 +45,15 @@ function sendArticleCountEmails(){
     var subject ='Google Analytics Logs from '+from_date+' to '+to_date;
 
     // HTML本文を htmlbody に格納していきます。
-    // 基本 table タグのみで構成してみました。border はメール本文だと鬱陶しかったので指定してません。
-    var htmlbody = "<table>\n";
+    // 基本 table タグのみで構成してみました。
+    var htmlbody = "<table style='border: 1px solid gray; border-collapse: collapse;'>\n";
     data[0][1] = from_date;
     data[0][3] = to_date;
     for(j in data){
       htmlbody = htmlbody + "<tr>\n";
       for(k in data[j]){
         if(data[j][1] == "") continue;
-        htmlbody = htmlbody + "  <td>" + data[j][k] + "</td>\n";
+        htmlbody = htmlbody + "  <td style='border: 1px solid gray;'>" + data[j][k] + "</td>\n";
       }
     }
     // メール送信（htmlbody に入れたHTMLと、pdf に格納していた添付ファイルを指定してます。HTMLメールを受け付けない場合には、「Please allow a HTML message.」を表示しておきます。）
